@@ -9,6 +9,8 @@ from main.views import edit_product
 from main.views import show_main, create_product, show_xml 
 from main.views import show_main, create_product, show_xml, show_json
 from main.views import delete_product
+from main.views import get_product_json
+from main.views import add_product_ajax
 
 app_name = 'main'
 
@@ -24,5 +26,7 @@ urlpatterns = [
     path('xml/', show_xml, name='show_xml'), 
     path('json/', show_json, name='show_json'),
     path('delete/<int:id>', delete_product, name='delete_product'),
+    path('get-product/', get_product_json, name='get_product_json'),
+    path('create-product-ajax/', add_product_ajax, name='add_product_ajax'),
 ]
 
